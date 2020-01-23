@@ -1,0 +1,37 @@
+<div class="row mt-5 justify-content-md-center">
+    <div class="col-2">
+        <p class="h2">Update</p>
+    </div>
+</div>
+<form>
+    <div class="row mt-5 justify-content-md-center">
+        <div class="col-2">
+            <input type="text" class="form-control" placeholder="Cambio" [(ngModel)]="request.cambio" name="cambio">
+        </div>
+        <div class="col-2">
+            <select class="form-control" [(ngModel)]="request.origen" name="origen">
+                <option value="PEN">PEN</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select>
+        </div>
+        <div class="col-1">
+            <i class="fas fa-arrows-alt-h"></i>
+        </div>
+        <div class="col-2">
+            <select class="form-control" [(ngModel)]="request.destino" name="destino">
+                <option value="PEN">PEN</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select>
+        </div>
+        <div class="col-1">
+            <button class="btn btn-primary" (click)="doUpdate()">Update</button>
+        </div>
+    </div>
+</form>
+<div class="row bg-light mt-3">
+    <div class="col-12">
+        <p *ngIf="response.response" class="h6 text-center">CAMBIO REALIZADO</p>
+    </div>
+</div>
